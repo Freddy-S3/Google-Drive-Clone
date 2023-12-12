@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('file_shares', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('file_id')->nullable()->constrained('files');
-            $table->foreignId('user_id')->nullable()->constrained('users');
+            $table->foreignId('file_id')->constrained('files');
+            $table->foreignId('user_id')->constrained('users');
             $table->timestamps();
         });
     }
